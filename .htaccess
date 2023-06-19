@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9-_-]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9-_-]+)/([a-zA-Z0-9-_-]+)$ index.php?page=$1&state=$2
+
+ErrorDocument 403 https://localhost/forbidden
+
+Options -Indexes
